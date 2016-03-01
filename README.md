@@ -259,11 +259,11 @@ To see what else you can test for, go to: http://chaijs.com/guide/styles/
         var carTwo = new Car();
         carTwo.drive('left');
         carTwo.drive('up');
-        it('should have an x of 20 after driving left once', function(){
+        it('should have an x of 0 after driving left once', function(){
             expect( carTwo.x ).to.equal(0);
         });
 
-        it('should have an y of 20 after driving up once', function(){
+        it('should have an y of 0 after driving up once', function(){
             expect( carTwo.y ).to.equal(0);
         });
     });
