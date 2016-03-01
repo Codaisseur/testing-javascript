@@ -132,6 +132,8 @@ Behaviour Driven Development: first we're going to describe what our app should 
     });
     ```
     
+    ![TDD Cycle](https://marcabraham.files.wordpress.com/2012/04/06_red_green_refactor.jpg)
+    
 12. Then the refactor:
 	```javascript
 	function isJuf(number){
@@ -152,6 +154,10 @@ Behaviour Driven Development: first we're going to describe what our app should 
 	    isDivisibleBy7: isDivisibleBy7
 	};
 	```
+	
+	as we iretate further on our app:
+	
+	![TDD Cycle over sprints](https://upload.wikimedia.org/wikipedia/commons/0/0b/TDD_Global_Lifecycle.png)
 	
 13. Now that the building blocks of our app are done and tested. We can add the stuff that will run it in Node:
 
