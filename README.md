@@ -213,7 +213,7 @@ Sometimes you can't or don't want to use NodeJS, don't worry, you can also run M
 	    });
 	
 	    it('should start at position Y: 10', function(){
-	        expect( myCar.x ).to.equal(10);
+	        expect( myCar.y ).to.equal(10);
 	    });
 	});
 ```
@@ -253,7 +253,7 @@ To see what else you can test for, go to: http://chaijs.com/guide/styles/
         });
 
         it('should have an y of 20 after driving down once', function(){
-            expect( carOne.x ).to.equal(20);
+            expect( carOne.y ).to.equal(20);
         });
 
         var carTwo = new Car();
@@ -264,7 +264,7 @@ To see what else you can test for, go to: http://chaijs.com/guide/styles/
         });
 
         it('should have an y of 20 after driving up once', function(){
-            expect( carTwo.x ).to.equal(0);
+            expect( carTwo.y ).to.equal(0);
         });
     });
     ```
