@@ -1,0 +1,16 @@
+{
+  "name": "test-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha src/index.test.js -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
