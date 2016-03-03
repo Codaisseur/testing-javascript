@@ -1,29 +1,43 @@
-function Car(){
-    this.x = 10;
-    this.y = 10;
+function Car(x, y){
+    this.x = x || 10;
+    this.y = y  || 10;
 
-    createDOMNode(this);
-    go(this);
+    this.goVertical = function (){
+        this.element.style.width = 10 + "px";
+        this.element.style.height = 20 + "px";
+    };
+
+    this.goHorizontal = function (){
+        this.element.style.width = 20 + "px";
+        this.element.style.height = 10 + "px";
+    };
 
     this.drive = function( direction ){
         switch(direction) {
             case 'left':
                 this.x -= 10;
+                this.goHorizontal();
                 break;
             case 'right':
                 this.x += 10;
+                this.goHorizontal();
                 break;
             case 'up':
                 this.y -= 10;
+                this.goVertical();
                 break;
             case 'down':
                 this.y += 10;
+                this.goVertical();
                 break;
         }
 
         this.element.style.left = this.x + "px";
         this.element.style.top = this.y + "px";
     };
+
+    createDOMNode(this);
+    go(this);
 }
 
 function createDOMNode(car){
@@ -38,7 +52,9 @@ function createDOMNode(car){
 }
 
 function go(car){
+    var direction = ["left", "right", "up", "down"];
     setInterval(function(){
-        car.drive("right");
-    }, 1000);
+        var random = Math.floor(Math.random() * 4);
+        car.drive(direction[random]);
+    }, 100);
 }
