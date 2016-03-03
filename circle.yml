@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 4
+general:
+  build_dir: node
+
+dependencies:
+  cache_directories:
+    - node/node_modules
+
+  post:
+    - npm install
+
+test:
+  override:
+    - npm run ci
