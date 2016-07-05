@@ -228,10 +228,12 @@ Now let's create the skeleton for our Car app in app.js:
 4. Let's fix Car so that it passes the test:
 
 	```javascript
-	function Car(){
-	    this.x = 10;
-	    this.y = 10;
-	}
+	class Car{
+        constructor(x, y){
+            this.x = 10;
+            this.y = 10;
+        }
+    }
 	```
 5. Now it passes the test! We can also test other things except for `equals`, such as: is x and instance of Y. Like this:
 
@@ -272,20 +274,23 @@ To see what else you can test for, go to: http://chaijs.com/guide/styles/
 7. Now let's write the code:
 
 	```javascript
-    this.drive = function( direction ){
-        switch(direction) {
-            case 'left':
-                this.x -= 10;
-                break;
-            case 'right':
-                this.x += 10;
-                break;
-            case 'up':
-                this.y -= 10;
-                break;
-            case 'down':
-                this.y += 10;
-                break;
+	class Car{
+	    // ...
+        drive( direction ){
+            switch(direction) {
+                case 'left':
+                    this.x -= 10;
+                    break;
+                case 'right':
+                    this.x += 10;
+                    break;
+                case 'up':
+                    this.y -= 10;
+                    break;
+                case 'down':
+                    this.y += 10;
+                    break;
+            }
         }
     }
     ```

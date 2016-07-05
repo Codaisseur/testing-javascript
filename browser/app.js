@@ -1,18 +1,23 @@
-function Car(x, y){
-    this.x = x || 10;
-    this.y = y  || 10;
+class Car{
+    constructor(x, y){
+        this.x = x || 10;
+        this.y = y || 10;
 
-    this.goVertical = function (){
+        createDOMNode(this);
+        go(this);
+    }
+
+    goVertical(){
         this.element.style.width = 10 + "px";
         this.element.style.height = 20 + "px";
     };
 
-    this.goHorizontal = function (){
+    goHorizontal(){
         this.element.style.width = 20 + "px";
         this.element.style.height = 10 + "px";
     };
 
-    this.drive = function( direction ){
+    drive( direction ){
         switch(direction) {
             case 'left':
                 this.x -= 10;
@@ -35,9 +40,6 @@ function Car(x, y){
         this.element.style.left = this.x + "px";
         this.element.style.top = this.y + "px";
     };
-
-    createDOMNode(this);
-    go(this);
 }
 
 function createDOMNode(car){
