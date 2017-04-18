@@ -20,11 +20,11 @@ class Car{
     drive( direction ){
         switch(direction) {
             case 'left':
-                this.x -= 10;
+                this.x -= 20;
                 this.goHorizontal();
                 break;
             case 'right':
-                this.x += 10;
+                this.x += 20;
                 this.goHorizontal();
                 break;
             case 'up':
